@@ -1,0 +1,17 @@
+{
+  "name": "docker-node",
+  "version": "1.0.0",
+  "description": "Base docker image with node and zsh",
+  "author": "pstramecki",
+  "license": "MIT",
+  "keywords": [
+    "docker",
+    "node",
+    "zsh"
+  ],
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+}

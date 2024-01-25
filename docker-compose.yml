@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  node:
+    image: pstramecki/node:latest
+    build:
+      dockerfile: .docker/node/Dockerfile
+      context: .
+      tags:
+        - pstramecki/node:1.0.0
+      args:
+        NODE_IMAGE_VERSION: 21.6.0-slim
+    env_file: ./.env
+
+    tty: true
+    container_name: ${NODE_CONTAINER_NAME}
+
+
