@@ -1,0 +1,16 @@
+name: Test
+
+on:
+    push:
+        branches:
+            - 'releases/*'
+
+jobs:
+    publish-to-dockerhub:
+        name: Push Docker image to Docker Hub
+        runs-on: ubuntu-latest
+        steps:
+            - name: Test
+              uses: milankomaj/releases-x@v0.1
+              with:
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
