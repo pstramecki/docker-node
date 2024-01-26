@@ -6,7 +6,6 @@ on:
     release:
         types:
             - published
-            - edited
 
 jobs:
     publish-to-dockerhub:
@@ -30,7 +29,8 @@ jobs:
                   flavor: |
                       latest=true
                   tags: |
-                      type=ref,event=tag
+                      type=raw,value=latest,enable=${{ github.ref == 'refs/heads/main' }}
+                      type=ref,event=tag,enable=${{ github.event_name == 'release' }}
 
             - name: Build and push Docker image
               uses: docker/build-push-action@v5
