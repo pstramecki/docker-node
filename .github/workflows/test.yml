@@ -1,0 +1,17 @@
+name: Test Docker Image
+
+on: [push, pull_request]
+
+jobs:
+    test:
+        name: Test Docker image
+        runs-on: ubuntu-latest
+        steps:
+            - name: Check out the repo
+              uses: actions/checkout@v4
+
+            - name: Test the Docker image
+              run: docker-compose up -d
+
+            - name: Test completed
+              run: echo "Test successful"
