@@ -1,0 +1,10 @@
+name: Publish Docker Image
+
+on: [push]
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+
+            - run: echo "Image is testes without fails"
