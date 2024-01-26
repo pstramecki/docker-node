@@ -27,6 +27,10 @@ jobs:
               uses: docker/metadata-action@v5
               with:
                   images: pstramecki/node
+                  flavor: |
+                      latest=true
+                  tags: |
+                      type=ref,event=tag
 
             - name: Build and push Docker image
               uses: docker/build-push-action@v5
