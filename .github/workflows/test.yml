@@ -2,15 +2,16 @@ name: Test Docker Image CI
 
 on:
   pull_request:
-    branches: [ "main" ]
+    branches: [ main ]
+  release:
+    types: [ created ]
 
 jobs:
 
-  build:
-
+  test:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
     - name: Build the Docker image
+      uses: actions/checkout@v4
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
