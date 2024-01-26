@@ -33,7 +33,6 @@ jobs:
                       type=semver,priority=1000,pattern={{version}}
 
             - name: Test the Docker image
-              uses: actions/checkout@v4
               run: docker-compose up -d
 
             - name: Build and push Docker image
