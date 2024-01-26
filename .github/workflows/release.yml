@@ -29,8 +29,6 @@ jobs:
               uses: docker/metadata-action@v5
               with:
                   images: pstramecki/node
-                  flavor: |
-                      latest=true
                   tags: |
                       type=semver,priority=1000,pattern={{version}}
 
