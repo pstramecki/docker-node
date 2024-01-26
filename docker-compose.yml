@@ -5,8 +5,6 @@ services:
     build:
       dockerfile: .docker/node/Dockerfile
       context: .
-      tags:
-        - pstramecki/node:1.0.0
     env_file: ./.env
     tty: true
 
