@@ -1,6 +1,4 @@
-ARG NODE_IMAGE_VERSION
-
-FROM node:${NODE_IMAGE_VERSION}
+FROM node:21.6.0-slim
 
 RUN apt-get update -y
 RUN apt-get install -y dos2unix
