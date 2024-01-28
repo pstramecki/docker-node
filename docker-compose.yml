@@ -1,11 +1,10 @@
-version: "3.9"
+version: "3.8"
+
 services:
   node:
     image: pstramecki/node:latest
     build:
-      dockerfile: .docker/node/Dockerfile
       context: .
-    env_file: ./.env
     tty: true
 
 
