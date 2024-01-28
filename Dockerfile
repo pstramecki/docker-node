@@ -27,3 +27,7 @@ RUN /tmp/zsh-in-docker.sh \
     -p 'history-substring-search' \
     -a 'bindkey "\$terminfo[kcuu1]" history-substring-search-up' \
     -a 'bindkey "\$terminfo[kcud1]" history-substring-search-down'
+
+RUN npm install -g npm@10.4.0
+RUN yarn set version 1.22.21
+
